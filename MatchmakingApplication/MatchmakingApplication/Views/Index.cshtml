@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ExpressConnect";
+}
+
+<h3>
+    <i class="fa fa-angle-right"></i>
+    <span id="page-title">Network Matchmaking</span>
+</h3>
+<div class="col-md-12 mt">
+    <div id="roster-panel" class="content-panel data-panel">
+        <h4><i class="fa fa-angle-right"></i> Player List <i id="refresh-icon" class="fa fa-refresh"></i></h4><hr>
+        <table class="table table-bordered table-striped table-condensed table-data">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mu (&mu;)</th>
+                    <th>Sigma (&sigma;)</th>
+                </tr>
+            </thead>
+            <tbody id="roster"></tbody>
+        </table>
+    </div><!-- --/content-panel ---->
+</div>
+
+<div class="col-md-12 mt">
+    <div id="network-panel" class="content-panel data-panel" style="display: none;">
+        <h4><i class="fa fa-dashboard"></i> Network MatchMaking <i id="player-icon" class="fa fa-users"></i> <i id="network-icon" class="fa fa-cubes"></i> </h4><hr>
+        <table id="network-panel" class="table table-bordered table-striped table-condensed table-data">
+            <thead>
+                <tr>
+                    <th>Address</th>
+                    <th>Port</th>
+                    <th>Game Name</th>
+                    <th>Game Type</th>
+                    <th>Max Conn.</th>
+                    <th>Comment</th>
+                    <th>Players</th>
+                </tr>
+            </thead>
+            <tbody id="network"></tbody>
+        </table>
+    </div><!-- --/content-panel ---->
+</div>
+
+<div class="col-md-12 mt">
+    <div id="team-panel" class="content-panel data-panel" style="display: none;">
+        <h4><i class="fa fa-desktop"></i> Team MatchMaking <i id="header-icon" class="fa fa-trophy"></i></h4><hr>
+
+    </div><!-- --/content-panel ---->
+</div>
+
+@section Footer{
+    <script id="playerTemplate" type="text/template">
+        <td><%= PlayerGuid %></td>
+        <td><%= Mu %></td>
+        <td><%= Sigma %></td>
+    </script>
+    <script id="hostTemplate" type="text/template"><tr id="<%= Guid %>">
+            <td><%= Address %></td>
+            <td><%= Port %></td>
+            <td><%= GameName %></td>
+            <td><%= GameType %></td>
+            <td><%= MaxConnections %></td>
+            <td><%= Comment %></td>
+            <td><%= PlayerCount %></td>
+    </tr></script>
+    <script id="hostPlayerTemplate" type="text/template"><tr>
+        <table class="table table-bordered table-striped table-condensed table-data">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mu (&mu;)</th>
+                    <th>Sigma (&sigma;)</th>
+                </tr>
+            </thead>
+            <tbody id="host-roster">
+            </tbody>
+        </table>
+    </tr></script>
+    <script src="@Url.Content("~/content/scripts/app/home.js")" type="text/javascript"></script>
+}

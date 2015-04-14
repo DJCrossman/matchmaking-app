@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href='@Url.Content("~/content/styles/bootstrap.css")' type="text/css" media="screen" />
+    <link rel="stylesheet" href='@Url.Content("~/content/styles/font-awesome.min.css")' type="text/css" media="screen" />
+    <link rel="stylesheet" href='@Url.Content("~/content/styles/style-responsive.css")' type="text/css" media="screen" />
+    <link rel="stylesheet" href='@Url.Content("~/content/styles/style.css")' type="text/css" media="screen" />
+</head>
+<body>
+
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <!--logo start-->
+            <a href="" class="logo"><b>@ViewBag.Title</b></a>
+            <!--logo end-->
+        </header>
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    
+                    <li class="mt">
+                        <a href="#network/30">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Network MatchMaking</span>
+                        </a>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="#team/8">
+                            <i class="fa fa-desktop"></i>
+                            <span>Team MatchMaking</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper site-min-height">
+                @RenderBody()
+            </section><! --/wrapper -->
+        </section><!-- /MAIN CONTENT -->
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                2015 - David Crossman
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+
+    <script src="@Url.Content("~/content/scripts/lib/jquery-1.11.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/content/scripts/lib/bootstrap.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/content/scripts/lib/underscore.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/content/scripts/lib/backbone.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/content/scripts/app/models.js")" type="text/javascript"></script>
+    @RenderSection("Footer")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

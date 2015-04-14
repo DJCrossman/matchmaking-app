@@ -1,0 +1,8 @@
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\bin\Release\ExpressConnect.dll
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\bin\Release\ExpressConnect.pdb
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\bin\Release\Nancy.dll
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\bin\Release\Nancy.Hosting.Aspnet.dll
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\bin\Release\Nancy.xml
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\bin\Release\Nancy.Hosting.Aspnet.xml
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\obj\Release\ExpressConnect.dll
+C:\Users\David\Develop\matchmaking-app\MatchMakingApplication\ExpressConnect\obj\Release\ExpressConnect.pdb
